@@ -6,7 +6,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "angularcomunicacionmodelos": {
+    "modeloscomunicacioncomponents": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -66,10 +66,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "angularcomunicacionmodelos:build:production"
+              "buildTarget": "modeloscomunicacioncomponents:build:production"
             },
             "development": {
-              "buildTarget": "angularcomunicacionmodelos:build:development"
+              "buildTarget": "modeloscomunicacioncomponents:build:development"
             }
           },
           "defaultConfiguration": "development"
