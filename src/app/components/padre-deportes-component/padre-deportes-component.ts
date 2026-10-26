@@ -10,7 +10,7 @@ export class PadreDeportesComponent {
   public deportes: Array<string>;
   public mensaje!: string;
 
-  //EL PADRE NECESITA UN METODO PARA ENLAZARLO CON EL HIJO Y 
+  //EL PADRE NECESITA UN METODO PARA ENLAZARLO CON EL HIJO Y
   //ENVIARLO COMO SI FUERA PROPS
   seleccionarFavoritoPadre(data: string): void{
     console.log("Yo soy tu padre");

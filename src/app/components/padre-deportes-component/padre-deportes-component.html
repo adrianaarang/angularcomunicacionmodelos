@@ -5,7 +5,8 @@
     <ul>
         @for (deporte of deportes; track deporte){
             <li>
-                <app-hijo-deporte-component [sport]="deporte"
+                <app-hijo-deporte-component
+                [sport]="deporte"
                 (seleccionarFavoritoPadre)="seleccionarFavoritoPadre($event)"
                 ></app-hijo-deporte-component>
             </li>
