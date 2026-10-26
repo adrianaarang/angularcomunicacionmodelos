@@ -11,7 +11,7 @@ import { Comic } from '../../models/comic';
 })
 export class LecturaExcelComponent implements OnInit {
   public comicsArray: Array<Comic>;
-  
+
   constructor(private _cdr: ChangeDetectorRef){
     this.comicsArray = [];
   }
@@ -21,16 +21,16 @@ export class LecturaExcelComponent implements OnInit {
     fetch(path).then(res => res.arrayBuffer())
     .then((buffer) => {
       //RECUPERAR EL LIBRO DE TRABAJO
-      const workbook = XLSX.read(buffer, {type: "array"});
+      let workbook = XLSX.read(buffer, {type: "array"});
       //RECUPERAR LA HOJA
       //NO SABEMOS EL NOMBRE DE LA HOJA QUE QUEREMOS Y LA NECESITAMOS
       //POR INDICE
-      const hojaName = workbook.SheetNames[0];
-      const hoja = workbook.Sheets[hojaName];
+      let  hojaName = workbook.SheetNames[0];
+      let  hoja = workbook.Sheets[hojaName];
       //CONVERTIR LOS DATOS DE LA HOJA EN JSON
       let data = XLSX.utils.sheet_to_json(hoja);
       this.comicsArray = data.map((c: any) => new Comic(c.titulo, c.imagen, c.descripcion));
-      this._cdr.detectChanges();      
+      this._cdr.detectChanges();
       console.log(data);
     })
     .catch(err => console.log("error leyendo excel", err))

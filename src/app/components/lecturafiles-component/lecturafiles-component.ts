@@ -27,9 +27,9 @@ export class LecturafilesComponent implements OnInit {
   readFileText(): void{
     //LA RUTA AL FILE DIRECTAMENTE ESTAMOS POSICIONADOS EN public (FRONT)
     let path: string = "./assets/test.txt";
-    //DENTRO DE FETCH, EN EL MOMENTO DE TRABAJAR CON LOS FORMATOS, 
+    //DENTRO DE FETCH, EN EL MOMENTO DE TRABAJAR CON LOS FORMATOS,
     //DEBEMOS INDICAR EL TIPADO QUE VAMOS A LEER
-    //TENEMOS 3 TIPOS DE DATO: 
+    //TENEMOS 3 TIPOS DE DATO:
     // text(): Texto plano
     // blob(): Array de byte[] (binario)
     // json(): Formato JSON

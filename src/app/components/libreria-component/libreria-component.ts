@@ -10,8 +10,9 @@ import { Comic } from '../../models/comic';
 export class LibreriaComponent implements OnInit {
   public comicsArray: Array<Comic>;
   public comicFavorito!: Comic;
+
   constructor(private _cdr: ChangeDetectorRef){
-   this.comicsArray = [new Comic("Peter Porker", "https://images.squarespace-cdn.com/content/v1/591a09be29687facef049955/1577120358648-LF2X9L388NUR661WF2HN/STL139169.jpg", "Spider Ham")]; 
+   this.comicsArray = [new Comic("Peter Porker", "https://images.squarespace-cdn.com/content/v1/591a09be29687facef049955/1577120358648-LF2X9L388NUR661WF2HN/STL139169.jpg", "Spider Ham")];
   }
 
   ngOnInit(): void {
@@ -35,5 +36,5 @@ export class LibreriaComponent implements OnInit {
     this.comicsArray.splice(index, 1);
   }
 
-  
+
 }
